@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container doors">
+	
+		<img src="door.png" class="w-25 door1">
+	
+	
+		<img src="door2.png" class="w-25 door2">
+	
+	
+		<img src="door3.png" class="w-25 door3">
+
+</div>
+
+<div style="background-image: url(bg.jpg); height: 800px; background-size: 100% 100%; display:none" class="location1">
+	<h1 class="text-white">Помоги Гарри найти метлу, плащ и палочку! Заработай 3 очка</h1>
+	<h1 class="text-white point0">0</h1>
+	<button class="btn btn-success m-3 btn1">Выйти из игры</button>
+	
+	<div ><img src="gun.png" width="100"  height="200" style="position: absolute; margin-left: 200px; margin-right: 200px"></div>
+	
+	<div class="ans1"><img src="mantiya.png" width="100" height="200" style="position: absolute; margin-left: 200px; margin-right: 200px"></div>
+	
+	<div class="ans2"><img src="metla.png" width="100" height="200" style="position: absolute; margin-left: 300px; margin-right: 700px"></div>
+	
+	<div class="ans3"><img src="palochka.png" width="50" height="100" style="position: absolute; margin-left: 100px;  margin-right: 1000px"></div>
+	
+	<div class=""><img src="ring.png" width="100" height="200" style="position: absolute; margin-left: 600px;  margin-right: 100px"></div>
+	
+</div>
+
+<div class="location2 " style="background-image: url(jimin.png); background-size: 100% 100%; display: none; height: 1000px;"><h1 class="help1">OMG HELP Me pls</h1></div>
+
+<div class="location3 " style="background-image: url(oejimin.png); background-size: 100% 100%; display: none; height: 1000px;"><h1>I know that Im so handsome</h1></div>
+
+
+<script type="text/javascript">
+	let point = 0; 
+		document.querySelector(".door1").onclick=function(){
+			alert("Welcome!")
+			document.querySelector(".location1").style.display="block";
+			document.querySelector(".doors").style.display="none";
+}
+        document.querySelector(".ans1").onclick=function(){
+        	point=point+1;
+        	document.querySelector(".ans1").style.display="none";
+        	document.querySelector(".point0").innerHTML=point;
+
+        }
+
+        document.querySelector(".ans2").onclick=function(){
+        	point=point+1;
+        	document.querySelector(".ans2").style.display="none";
+        	document.querySelector(".point0").innerHTML=point;
+
+        }
+        document.querySelector(".ans3").onclick=function(){
+        	point=point+1;
+        	document.querySelector(".ans3").style.display="none";
+        	document.querySelector(".point0").innerHTML=point;
+
+        }
+        document.querySelector(".btn1").onclick=function(){
+        	point=point+1;
+        	document.querySelector(".location1").style.display="none";
+        	document.querySelector(".doors").style.display="block";
+
+
+        }
+
+
+        document.querySelector(".door2").onclick=function(){
+			alert("Just try not falling in love")
+			document.querySelector(".location2").style.display="block";
+			document.querySelector(".doors").style.display="none";
+}
+		document.querySelector(".help1").onclick=function(){
+					alert("Okay justr try again later")
+					document.querySelector(".location2").style.display="none";
+					document.querySelector(".doors").style.display="block";
+		}
+
+
+
+
+document.querySelector(".door3").onclick=function(){
+			alert("I think this is your End Game baby")
+			document.querySelector(".location3").style.display="block";
+			document.querySelector(".doors").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
